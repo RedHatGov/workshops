@@ -1,0 +1,1449 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Workshops | Red Hat | Public Sector</title>
+
+    
+    
+    <link rel="stylesheet" href="/node_modules/patternfly/dist/css/patternfly.min.css" />
+    <link rel="stylesheet" href="/node_modules/patternfly/dist/css/patternfly-additions.min.css" />
+
+    
+    <link rel="stylesheet" href="/node_modules/highlight.js/styles/darkula.css" />
+
+    
+    <link rel="stylesheet" href="/css/main.css" />
+    <link rel="stylesheet" href="/css/asciidoc.css" />
+    <link rel="stylesheet" href="/css/custom.css" />
+    <link rel="stylesheet" href="/css/toastr.min.css" />
+
+    
+    <script id="adobe_dtm" src="//www.redhat.com/dtm.js" type="text/javascript"></script>
+
+    
+    <script src="/node_modules/patternfly/node_modules/jquery/dist/jquery.min.js"></script>
+
+    
+    <script src="/node_modules/patternfly/node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+
+    
+    <script src="/node_modules/patternfly/node_modules/c3/c3.min.js"></script>
+    <script src="/node_modules/patternfly/node_modules/d3/d3.min.js"></script>
+
+    
+    
+    <script src="/node_modules/patternfly/node_modules/datatables/media/js/jquery.dataTables.min.js"></script>
+    <script src="/node_modules/patternfly/node_modules/drmonty-datatables-colvis/js/dataTables.colVis.js"></script>
+    <script src="/node_modules/patternfly/node_modules/datatables.net-colreorder/js/dataTables.colReorder.js"></script>
+
+    
+    
+    <script src="/node_modules/patternfly/dist/js/patternfly.min.js"></script>
+
+    
+    <script src="/node_modules/patternfly/node_modules/patternfly-bootstrap-combobox/js/bootstrap-combobox.js"></script>
+
+    
+    <script src="/node_modules/patternfly/node_modules/bootstrap-datepicker/dist/js/bootstrap-datepicker.min.js"></script>
+
+    
+    <script src="/node_modules/patternfly/node_modules/moment/min/moment.min.js"></script>
+
+    
+    <script src="/node_modules/patternfly/node_modules/eonasdan-bootstrap-datetimepicker/build/js/bootstrap-datetimepicker.min.js"></script>
+
+    
+    <script src="/node_modules/patternfly/node_modules/bootstrap-select/dist/js/bootstrap-select.min.js"></script>
+
+    
+    <script src="/node_modules/patternfly/node_modules/bootstrap-switch/dist/js/bootstrap-switch.min.js"></script>
+
+    
+    <script src="/node_modules/patternfly/node_modules/bootstrap-touchspin/dist/jquery.bootstrap-touchspin.min.js"></script>
+
+    
+    <script src="/node_modules/patternfly/node_modules/patternfly-bootstrap-treeview/dist/bootstrap-treeview.min.js"></script>
+
+    
+    <script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js"></script>
+
+    
+    <script src="/node_modules/patternfly/node_modules/jquery-match-height/dist/jquery.matchHeight-min.js"></script>
+    
+    <script src="/js/clipboard.min.js"></script>
+    <script src="/js/clip.js"></script>
+
+    
+    <script src="/js/toastr.min.js"></script>
+
+    
+    <script src="/node_modules/highlight.js/lib/highlight.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+  </head>
+  <body class="">
+    
+
+<nav class="navbar navbar-default navbar-inverse navbar-fixed-top " role="navigation">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse-1">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="/">
+      <svg width=150 height=auto id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 613 145"><defs><style>.cls-1{fill:#e00;}.cls-2{fill:#fff;}</style></defs><path class="cls-1" d="M127.47,83.49c12.51,0,30.61-2.58,30.61-17.46a14,14,0,0,0-.31-3.42l-7.45-32.36c-1.72-7.12-3.23-10.35-15.73-16.6C124.89,8.69,103.76.5,97.51.5,91.69.5,90,8,83.06,8c-6.68,0-11.64-5.6-17.89-5.6-6,0-9.91,4.09-12.93,12.5,0,0-8.41,23.72-9.49,27.16A6.43,6.43,0,0,0,42.53,44c0,9.22,36.3,39.45,84.94,39.45M160,72.07c1.73,8.19,1.73,9.05,1.73,10.13,0,14-15.74,21.77-36.43,21.77C78.54,104,37.58,76.6,37.58,58.49a18.45,18.45,0,0,1,1.51-7.33C22.27,52,.5,55,.5,74.22c0,31.48,74.59,70.28,133.65,70.28,45.28,0,56.7-20.48,56.7-36.65,0-12.72-11-27.16-30.83-35.78"/><path d="M160,72.07c1.73,8.19,1.73,9.05,1.73,10.13,0,14-15.74,21.77-36.43,21.77C78.54,104,37.58,76.6,37.58,58.49a18.45,18.45,0,0,1,1.51-7.33l3.66-9.06A6.43,6.43,0,0,0,42.53,44c0,9.22,36.3,39.45,84.94,39.45,12.51,0,30.61-2.58,30.61-17.46a14,14,0,0,0-.31-3.42Z"/><path class="cls-2" d="M579.74,92.8c0,11.89,7.15,17.67,20.19,17.67a52.11,52.11,0,0,0,11.89-1.68V95a24.84,24.84,0,0,1-7.68,1.16c-5.37,0-7.36-1.68-7.36-6.73V68.3h15.56V54.1H596.78v-18l-17,3.68V54.1H568.49V68.3h11.25Zm-53,.32c0-3.68,3.69-5.47,9.26-5.47a43.12,43.12,0,0,1,10.1,1.26v7.15a21.51,21.51,0,0,1-10.63,2.63c-5.46,0-8.73-2.1-8.73-5.57m5.2,17.56c6,0,10.84-1.26,15.36-4.31v3.37h16.82V74.08c0-13.56-9.14-21-24.39-21-8.52,0-16.94,2-26,6.1l6.1,12.52c6.52-2.74,12-4.42,16.83-4.42,7,0,10.62,2.73,10.62,8.31v2.73a49.53,49.53,0,0,0-12.62-1.58c-14.31,0-22.93,6-22.93,16.73,0,9.78,7.78,17.24,20.19,17.24m-92.44-.94h18.09V80.92h30.29v28.82H506V36.12H487.93V64.41H457.64V36.12H439.55ZM370.62,81.87c0-8,6.31-14.1,14.62-14.1A17.22,17.22,0,0,1,397,72.09V91.54A16.36,16.36,0,0,1,385.24,96c-8.2,0-14.62-6.1-14.62-14.09m26.61,27.87h16.83V32.44l-17,3.68V57.05a28.3,28.3,0,0,0-14.2-3.68c-16.19,0-28.92,12.51-28.92,28.5a28.25,28.25,0,0,0,28.4,28.6,25.12,25.12,0,0,0,14.93-4.83ZM320,67c5.36,0,9.88,3.47,11.67,8.83H308.47C310.15,70.3,314.36,67,320,67M291.33,82c0,16.2,13.25,28.82,30.28,28.82,9.36,0,16.2-2.53,23.25-8.42l-11.26-10c-2.63,2.74-6.52,4.21-11.14,4.21a14.39,14.39,0,0,1-13.68-8.83h39.65V83.55c0-17.67-11.88-30.39-28.08-30.39a28.57,28.57,0,0,0-29,28.81M262,51.58c6,0,9.36,3.78,9.36,8.31S268,68.2,262,68.2H244.11V51.58Zm-36,58.16h18.09V82.92h13.77l13.89,26.82H292l-16.2-29.45a22.27,22.27,0,0,0,13.88-20.72c0-13.25-10.41-23.45-26-23.45H226Z"/></svg>
+      </a>
+    </div>
+    <div class="collapse navbar-collapse navbar-collapse-1">
+      <ul class="nav navbar-nav navbar-right">
+        
+        
+          
+            <li>
+              <a href="/">Home</a>
+            </li>
+          
+        
+          
+            <li>
+              <a href="/about/">About</a>
+            </li>
+          
+        
+          
+            <li>
+              <a href="/contact/">Contact</a>
+            </li>
+          
+        
+          
+            <li>
+              <a href="https://www.redhat.com/en/events">Events</a>
+            </li>
+          
+        
+          
+            <li>
+              <a href="/jr-sa/">Junior SA Program</a>
+            </li>
+          
+        
+          
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                Workshops <b class="caret"></b>
+              </a>
+              <ul class="dropdown-menu">
+                
+                  <li>
+                    <a href="/workshops/agile_integrations_ci/">Agile Integrations Workshop - Citizen Integrator</a>
+                  </li>
+                
+                  <li>
+                    <a href="/workshops/agile_integrations_dev/">Agile Integrations Workshop - Developer</a>
+                  </li>
+                
+                  <li>
+                    <a href="/workshops/ansible_automation/">Ansible Automation Workshop</a>
+                  </li>
+                
+                  <li>
+                    <a href="/workshops/ansible_tower_intro/">Ansible Tower - an Introduction</a>
+                  </li>
+                
+                  <li>
+                    <a href="/workshops/ansible_tower_azure/">Ansible Tower Workshop on Azure</a>
+                  </li>
+                
+                  <li>
+                    <a href="/workshops/cloudforms41/">CloudForms Workshops</a>
+                  </li>
+                
+                  <li>
+                    <a href="/workshops/security_container_intro/">Container Security - A Practical Introduction</a>
+                  </li>
+                
+                  <li>
+                    <a href="/workshops/security_containers/">Container Security Workshop</a>
+                  </li>
+                
+                  <li>
+                    <a href="/workshops/containers_101/">Containers 101 Workshop</a>
+                  </li>
+                
+                  <li>
+                    <a href="/workshops/secure_software_factory/">DevSecOps Workshop - Secure Software Factory</a>
+                  </li>
+                
+                  <li>
+                    <a href="/workshops/jdv_dev/">JBoss Data Virtualization Development</a>
+                  </li>
+                
+                  <li>
+                    <a href="/workshops/containers_the_hard_way/">Linux Containers the Hard Way</a>
+                  </li>
+                
+                  <li>
+                    <a href="/workshops/strangling_the_monolith/">Microservices Workshop - Strangling the Monolith</a>
+                  </li>
+                
+                  <li>
+                    <a href="/workshops/openshift_101_dcmetromap/">OpenShift 101 - DC Metro Map Workshop</a>
+                  </li>
+                
+                  <li>
+                    <a href="/workshops/openshift_4_101/">OpenShift 4 101</a>
+                  </li>
+                
+                  <li>
+                    <a href="/workshops/openshift_4_101_dynatrace/">OpenShift 4 101 w/Dynatrace</a>
+                  </li>
+                
+                  <li>
+                    <a href="/workshops/security_openshift/">OpenShift Security Workshop</a>
+                  </li>
+                
+                  <li>
+                    <a href="/workshops/openshift_service_mesh/">OpenShift Service Mesh</a>
+                  </li>
+                
+                  <li>
+                    <a href="/workshops/rhel_8/">Red Hat Enterprise Linux 8</a>
+                  </li>
+                
+                  <li>
+                    <a href="/workshops/rhosp_101/">Red Hat OpenStack Platform 101</a>
+                  </li>
+                
+                  <li>
+                    <a href="/workshops/selinux_policy/">SELinux Policy Workshop</a>
+                  </li>
+                
+                  <li>
+                    <a href="/workshops/source_to_image/">Source to Image</a>
+                  </li>
+                
+                  <li>
+                    <a href="/workshops/openshift_service_mesh_v1.0/">zOpenShift Service Mesh</a>
+                  </li>
+                
+              </ul>
+            </li>
+          
+        
+          
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                alpha <b class="caret"></b>
+              </a>
+              <ul class="dropdown-menu">
+                
+                  <li>
+                    <a href="/workshops/alpha/ansible_with_rhocp_edge/">Applied Ansible Automation - Containerized Edge Workshop</a>
+                  </li>
+                
+              </ul>
+            </li>
+          
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+
+<div class="jumbotron jumbotron-page text-center">
+  <h1>Workshops</h1>
+</div>
+
+<div class="container">
+  <div class="row">
+    <ul>
+      
+      <li>
+        
+      </li>
+      
+      <li>
+        
+      </li>
+      
+      <li>
+        
+      </li>
+      
+      <li>
+        
+      </li>
+      
+      <li>
+        
+      </li>
+      
+      <li>
+        
+      </li>
+      
+      <li>
+        
+      </li>
+      
+      <li>
+        
+      </li>
+      
+      <li>
+        
+      </li>
+      
+      <li>
+        
+      </li>
+      
+      <li>
+        
+      </li>
+      
+      <li>
+        
+      </li>
+      
+      <li>
+        
+      </li>
+      
+      <li>
+        
+      </li>
+      
+      <li>
+        About
+      </li>
+      
+      <li>
+        CloudForms Workshop Prerequisites
+      </li>
+      
+      <li>
+        Conclusion
+      </li>
+      
+      <li>
+        Conclusion - Closing thoughts &amp; homework
+      </li>
+      
+      <li>
+        Contact
+      </li>
+      
+      <li>
+        Deploy Your Own Terminal
+      </li>
+      
+      <li>
+        Exercise 1 - Install JDV and JBDS
+      </li>
+      
+      <li>
+        Exercise 1 - The Mount Namespace
+      </li>
+      
+      <li>
+        Exercise 1.0 - A Guided Tour of CloudForms
+      </li>
+      
+      <li>
+        Exercise 1.0 - Configuring Ansible Tower
+      </li>
+      
+      <li>
+        Exercise 1.0 - Deploy OpenShift
+      </li>
+      
+      <li>
+        Exercise 1.0 - Install buildah, skopeo, and podman
+      </li>
+      
+      <li>
+        Exercise 1.0 - Intro to Cockpit
+      </li>
+      
+      <li>
+        Exercise 1.0 - Introduction to Security Enhanced Linux (SELinux)
+      </li>
+      
+      <li>
+        Exercise 1.0 - Running Ad hoc commands
+      </li>
+      
+      <li>
+        Exercise 1.0 - Running Ad hoc commands
+      </li>
+      
+      <li>
+        Exercise 1.0 - Running Ad-hoc commands
+      </li>
+      
+      <li>
+        Exercise 1.0 - Welcome to RHEL!
+      </li>
+      
+      <li>
+        Exercise 1.1 - Creating and Running a Job Template
+      </li>
+      
+      <li>
+        Exercise 1.1 - Explore Your First Infrastructure Provider
+      </li>
+      
+      <li>
+        Exercise 1.1 - Introduction to SELinux
+      </li>
+      
+      <li>
+        Exercise 1.1 - OpenShift Templates
+      </li>
+      
+      <li>
+        Exercise 1.1 - Pulling and Running Container Images
+      </li>
+      
+      <li>
+        Exercise 1.1 - Reproducible and Trustworthy Dockerfiles
+      </li>
+      
+      <li>
+        Exercise 1.1 - Running an Ansible playbook
+      </li>
+      
+      <li>
+        Exercise 1.1 - What&#39;s New in RHEL 8
+      </li>
+      
+      <li>
+        Exercise 1.1 - Writing Your First Playbook
+      </li>
+      
+      <li>
+        Exercise 1.1 - Writing Your First playbook
+      </li>
+      
+      <li>
+        Exercise 1.10 - Explore Catalog Configuration
+      </li>
+      
+      <li>
+        Exercise 1.11 - Explore Chargeback
+      </li>
+      
+      <li>
+        Exercise 1.12 - Explore Utilization
+      </li>
+      
+      <li>
+        Exercise 1.13 - Explore Planning
+      </li>
+      
+      <li>
+        Exercise 1.14 - Examine Policies
+      </li>
+      
+      <li>
+        Exercise 1.15 - Explore Network Topology
+      </li>
+      
+      <li>
+        Exercise 1.16 - Explore Containers
+      </li>
+      
+      <li>
+        Exercise 1.17 - Introduction to the Automate Datastore
+      </li>
+      
+      <li>
+        Exercise 1.18 - “Hello, World!” Automation Script
+      </li>
+      
+      <li>
+        Exercise 1.19 - Ansible Inside
+      </li>
+      
+      <li>
+        Exercise 1.2 - Discovering Virtualization Host Systems
+      </li>
+      
+      <li>
+        Exercise 1.2 - Docker `USER`
+      </li>
+      
+      <li>
+        Exercise 1.2 - Linux Kernel Capabilities
+      </li>
+      
+      <li>
+        Exercise 1.2 - Running Your Playbook
+      </li>
+      
+      <li>
+        Exercise 1.2 - Running Your Playbook
+      </li>
+      
+      <li>
+        Exercise 1.2 - SELinux Contexts
+      </li>
+      
+      <li>
+        Exercise 1.2 - Tour of the Web Console
+      </li>
+      
+      <li>
+        Exercise 1.2 - Working with Container Images
+      </li>
+      
+      <li>
+        Exercise 1.2 - Writing a playbook to push podman to the edge
+      </li>
+      
+      <li>
+        Exercise 1.20 - Ansible Tower
+      </li>
+      
+      <li>
+        Exercise 1.3 - Discovering VM Systems
+      </li>
+      
+      <li>
+        Exercise 1.3 - Managing Updates Using the Web Console
+      </li>
+      
+      <li>
+        Exercise 1.3 - Remove setuid/setgid Binaries
+      </li>
+      
+      <li>
+        Exercise 1.3 - SELinux
+      </li>
+      
+      <li>
+        Exercise 1.3 - Using Variables, Loops, and Handlers
+      </li>
+      
+      <li>
+        Exercise 1.3 - Using Variables, Loops, and Handlers
+      </li>
+      
+      <li>
+        Exercise 1.3 - Working with the Dockerfile
+      </li>
+      
+      <li>
+        Exercise 1.4 - CGroups
+      </li>
+      
+      <li>
+        Exercise 1.4 - Configuring Terminal Session Recording
+      </li>
+      
+      <li>
+        Exercise 1.4 - Explore Reports
+      </li>
+      
+      <li>
+        Exercise 1.4 - Running the apache-basic-playbook
+      </li>
+      
+      <li>
+        Exercise 1.4 - Running the apache-basic-playbook
+      </li>
+      
+      <li>
+        Exercise 1.4 - Skopeo
+      </li>
+      
+      <li>
+        Exercise 1.4 - Working with a Container Registry
+      </li>
+      
+      <li>
+        Exercise 1.5 - Atomic Scanner
+      </li>
+      
+      <li>
+        Exercise 1.5 - Examine Infrastructure Provisioning
+      </li>
+      
+      <li>
+        Exercise 1.5 - Managing Cryptographic Policies
+      </li>
+      
+      <li>
+        Exercise 1.5 - Namespaces
+      </li>
+      
+      <li>
+        Exercise 1.5 - Roles: Making your playbooks reusable
+      </li>
+      
+      <li>
+        Exercise 1.5 - Roles: Making your playbooks reusable
+      </li>
+      
+      <li>
+        Exercise 1.6 - Explore Cloud Providers
+      </li>
+      
+      <li>
+        Exercise 1.6 - Managing Software in an Application Stream
+      </li>
+      
+      <li>
+        Exercise 1.6 - Read Only Containers
+      </li>
+      
+      <li>
+        Exercise 1.6 - SCC &amp; Seccomp
+      </li>
+      
+      <li>
+        Exercise 1.7 - Explore Cloud Instances
+      </li>
+      
+      <li>
+        Exercise 1.7 - OpenSCAP Security Compliance Scanning
+      </li>
+      
+      <li>
+        Exercise 1.7 - Red Hat Container Catalog
+      </li>
+      
+      <li>
+        Exercise 1.7 - Seccomp
+      </li>
+      
+      <li>
+        Exercise 1.8 - Explore Group and User Access Controls
+      </li>
+      
+      <li>
+        Exercise 1.8 - Introduction to using buildah, podman and skopeo to work on containers
+      </li>
+      
+      <li>
+        Exercise 1.8 - Red Hat Security API
+      </li>
+      
+      <li>
+        Exercise 1.8 - SELinux
+      </li>
+      
+      <li>
+        Exercise 1.9 - Image Streams &amp; Secrets
+      </li>
+      
+      <li>
+        Exercise 1.9 - Introduction to Catalogs
+      </li>
+      
+      <li>
+        Exercise 1.9 - Linux Kernel Capabilities
+      </li>
+      
+      <li>
+        Exercise 1.9 - System Roles with Ansible
+      </li>
+      
+      <li>
+        Exercise 10 - View data in AngularJS client
+      </li>
+      
+      <li>
+        Exercise 2 - PID and IPC Namespaces
+      </li>
+      
+      <li>
+        Exercise 2 - Prepare the datasources
+      </li>
+      
+      <li>
+        Exercise 2.0 - Build a CI/CD pipeline and container in Red Hat OpenShift
+      </li>
+      
+      <li>
+        Exercise 2.0 - Creating Custom SELinux Policy
+      </li>
+      
+      <li>
+        Exercise 2.0 - Installing Ansible Tower
+      </li>
+      
+      <li>
+        Exercise 2.0 - Installing Ansible Tower
+      </li>
+      
+      <li>
+        Exercise 2.1 - Configuring Ansible Tower
+      </li>
+      
+      <li>
+        Exercise 2.1 - Configuring Ansible Tower
+      </li>
+      
+      <li>
+        Exercise 2.1 - Generating a generic policy
+      </li>
+      
+      <li>
+        Exercise 2.1 - Run CI/CD pipeline (powered by Tekton) in Red Hat OpenShift
+      </li>
+      
+      <li>
+        Exercise 2.2 - Creating a Custom SELinux Application Policy
+      </li>
+      
+      <li>
+        Exercise 2.2 - Creating and Running a Job Template
+      </li>
+      
+      <li>
+        Exercise 2.2 - Creating and Running a Job Template
+      </li>
+      
+      <li>
+        Exercise 2.3 - Creating Policy Rules for Network Access
+      </li>
+      
+      <li>
+        Exercise 2.4 - Finishing the Policy
+      </li>
+      
+      <li>
+        Exercise 3 - Network and UTS Namespaces
+      </li>
+      
+      <li>
+        Exercise 3 - Prepare Postman and AngularJS client
+      </li>
+      
+      <li>
+        Exercise 3.0 - Configure Red Hat Enterprise Linux to run containers
+      </li>
+      
+      <li>
+        Exercise 3.0 - Using Ansible to Implement Security
+      </li>
+      
+      <li>
+        Exercise 3.0 - Using Ansible to Implement Security
+      </li>
+      
+      <li>
+        Exercise 3.1 - Setup Ansible template to stage temporary access token on edge node
+      </li>
+      
+      <li>
+        Exercise 3.2 - Running an Ansible Automation template
+      </li>
+      
+      <li>
+        Exercise 3.3 - Create new template to stage containers on edge node
+      </li>
+      
+      <li>
+        Exercise 4 - Create new teiid project
+      </li>
+      
+      <li>
+        Exercise 4 - User Namespace
+      </li>
+      
+      <li>
+        Exercise 4.0 - Update to a new container on OpenShift and field to edge
+      </li>
+      
+      <li>
+        Exercise 5 - All Together Now
+      </li>
+      
+      <li>
+        Exercise 5 - Import PostgreSQL data
+      </li>
+      
+      <li>
+        Exercise 6 - Changing the Filesystem
+      </li>
+      
+      <li>
+        Exercise 6 - Import REST data
+      </li>
+      
+      <li>
+        Exercise 7 - Container Networking
+      </li>
+      
+      <li>
+        Exercise 7 - Import Excel data
+      </li>
+      
+      <li>
+        Exercise 8 - Federate Data
+      </li>
+      
+      <li>
+        Exercise 9 - Secure Data Services
+      </li>
+      
+      <li>
+        Fin
+      </li>
+      
+      <li>
+        Fin.
+      </li>
+      
+      <li>
+        Fin.
+      </li>
+      
+      <li>
+        Fin.
+      </li>
+      
+      <li>
+        Fin.
+      </li>
+      
+      <li>
+        Fin.
+      </li>
+      
+      <li>
+        Intro to Service Mesh - Adding a New Service
+      </li>
+      
+      <li>
+        Intro to Service Mesh - Building a Microservice
+      </li>
+      
+      <li>
+        Intro to Service Mesh - Deploying an App
+      </li>
+      
+      <li>
+        Introduction
+      </li>
+      
+      <li>
+        Introduction to Red Hat OpenStack Platform
+      </li>
+      
+      <li>
+        Junior SA Program
+      </li>
+      
+      <li>
+        Key Terms
+      </li>
+      
+      <li>
+        Lab - Building and Deploying a Fast-Moving Monolith
+      </li>
+      
+      <li>
+        Lab - Containerize the App
+      </li>
+      
+      <li>
+        Lab - Gochat S2I
+      </li>
+      
+      <li>
+        Lab - Login &amp; Tour of OpenShift
+      </li>
+      
+      <li>
+        Lab - Login &amp; Tour of Wetty
+      </li>
+      
+      <li>
+        Lab - Microservice Integration Patterns
+      </li>
+      
+      <li>
+        Lab - Roll Dice
+      </li>
+      
+      <li>
+        Lab - Run the App
+      </li>
+      
+      <li>
+        Lab - Source-to-Image
+      </li>
+      
+      <li>
+        Lab - Strangle Your Monolith
+      </li>
+      
+      <li>
+        Lab 01 - API Design
+      </li>
+      
+      <li>
+        Lab 01 - API Design
+      </li>
+      
+      <li>
+        Lab 01 - Welcome to OpenShift
+      </li>
+      
+      <li>
+        Lab 02 - API Mocking
+      </li>
+      
+      <li>
+        Lab 02 - API Mocking
+      </li>
+      
+      <li>
+        Lab 02 - Trusted Software Supply Chain
+      </li>
+      
+      <li>
+        Lab 03 - CI/CD Project and Pods
+      </li>
+      
+      <li>
+        Lab 03 - Fuse Online
+      </li>
+      
+      <li>
+        Lab 03 - Swagger to REST
+      </li>
+      
+      <li>
+        Lab 04 - Jenkins and OpenShift
+      </li>
+      
+      <li>
+        Lab 04 - Managing API Endpoints
+      </li>
+      
+      <li>
+        Lab 04 - SOAP to REST (Optional)
+      </li>
+      
+      <li>
+        Lab 05 - API Security
+      </li>
+      
+      <li>
+        Lab 05 - Creating Your Pipeline
+      </li>
+      
+      <li>
+        Lab 05 - Fuse Online
+      </li>
+      
+      <li>
+        Lab 06 - API Developer Portal
+      </li>
+      
+      <li>
+        Lab 06 - Build App Stage
+      </li>
+      
+      <li>
+        Lab 06 - Managed API Endpoints
+      </li>
+      
+      <li>
+        Lab 07 - API Developer Portal
+      </li>
+      
+      <li>
+        Lab 07 - Test Stage
+      </li>
+      
+      <li>
+        Lab 07 - Testing Your Application
+      </li>
+      
+      <li>
+        Lab 08 - API Consumption
+      </li>
+      
+      <li>
+        Lab 08 - Static Application Security Testing
+      </li>
+      
+      <li>
+        Lab 09 - Archive App
+      </li>
+      
+      <li>
+        Lab 1 - Login to Horizon
+      </li>
+      
+      <li>
+        Lab 1 - Welcome
+      </li>
+      
+      <li>
+        Lab 1 - Welcome
+      </li>
+      
+      <li>
+        Lab 1 - Welcome
+      </li>
+      
+      <li>
+        Lab 1.0 - Workshop introduction
+      </li>
+      
+      <li>
+        Lab 10 - Create Image Builder
+      </li>
+      
+      <li>
+        Lab 10 - Labels (Optional)
+      </li>
+      
+      <li>
+        Lab 11 - Build Image
+      </li>
+      
+      <li>
+        Lab 11 - Webhooks and Rollbacks (Optional)
+      </li>
+      
+      <li>
+        Lab 12 - Blue | Green Deployment (Optional)
+      </li>
+      
+      <li>
+        Lab 12 - Create and Deploy to Dev
+      </li>
+      
+      <li>
+        Lab 13 - Promote and Deploy to Stage
+      </li>
+      
+      <li>
+        Lab 14 - Run Pipeline
+      </li>
+      
+      <li>
+        Lab 15 - Trigger the Software Supply Chain
+      </li>
+      
+      <li>
+        Lab 16 - Create Quay Account
+      </li>
+      
+      <li>
+        Lab 17 - Clair Vulnerability Scan
+      </li>
+      
+      <li>
+        Lab 18 - OpenSCAP DISA STIG Scan
+      </li>
+      
+      <li>
+        Lab 2 - BYO Container
+      </li>
+      
+      <li>
+        Lab 2 - BYO Container
+      </li>
+      
+      <li>
+        Lab 2 - BYO Docker
+      </li>
+      
+      <li>
+        Lab 2 - Managing Neutron Networks
+      </li>
+      
+      <li>
+        Lab 2.0 - Container registries
+      </li>
+      
+      <li>
+        Lab 2.1 - Reviewing container details
+      </li>
+      
+      <li>
+        Lab 2.2 - Clean-up &amp; Summary
+      </li>
+      
+      <li>
+        Lab 3 - Deploying an App with S2I
+      </li>
+      
+      <li>
+        Lab 3 - Deploying an App with S2I
+      </li>
+      
+      <li>
+        Lab 3 - Install Dynatrace Agent
+      </li>
+      
+      <li>
+        Lab 3 - Managing Floating IP Addresses
+      </li>
+      
+      <li>
+        Lab 3.0 - Intro to Podman and base images
+      </li>
+      
+      <li>
+        Lab 3.1 - Check out the build details
+      </li>
+      
+      <li>
+        Lab 4 - Configuring Dynatrace ActiveGate (Optional)
+      </li>
+      
+      <li>
+        Lab 4 - Developing and Managing Your Application
+      </li>
+      
+      <li>
+        Lab 4 - Developing and Managing Your Application
+      </li>
+      
+      <li>
+        Lab 4 - Managing Security Groups
+      </li>
+      
+      <li>
+        Lab 4.0 - Linux kernel capabilities
+      </li>
+      
+      <li>
+        Lab 5 - Deploying an App with S2I
+      </li>
+      
+      <li>
+        Lab 5 - Managing Images
+      </li>
+      
+      <li>
+        Lab 5 - Webhooks and Rollbacks
+      </li>
+      
+      <li>
+        Lab 5 - Webhooks and Rollbacks
+      </li>
+      
+      <li>
+        Lab 5.0 - SELinux container integration
+      </li>
+      
+      <li>
+        Lab 6 - Application Replication
+      </li>
+      
+      <li>
+        Lab 6 - Deploying a 3 Tier App
+      </li>
+      
+      <li>
+        Lab 6 - Managing Instances
+      </li>
+      
+      <li>
+        Lab 6 - Replication and Recovery
+      </li>
+      
+      <li>
+        Lab 6.0 - Container inspection with Podman &amp; Skopeo
+      </li>
+      
+      <li>
+        Lab 6.1 - Application Recovery
+      </li>
+      
+      <li>
+        Lab 6.2 - Application Health
+      </li>
+      
+      <li>
+        Lab 7 - Developing and Managing Your Application
+      </li>
+      
+      <li>
+        Lab 7 - Labels
+      </li>
+      
+      <li>
+        Lab 7 - Labels
+      </li>
+      
+      <li>
+        Lab 7 - Using the OpenStack CLI(s)
+      </li>
+      
+      <li>
+        Lab 7.0 - Container image signing
+      </li>
+      
+      <li>
+        Lab 8 - CI / CD Pipeline
+      </li>
+      
+      <li>
+        Lab 8 - CI / CD Pipeline
+      </li>
+      
+      <li>
+        Lab 8 - Using Heat to Describe Stacks
+      </li>
+      
+      <li>
+        Lab 8 - Webhooks and Rollbacks (Optional)
+      </li>
+      
+      <li>
+        Lab 8.0 - Composing containers with Buildah
+      </li>
+      
+      <li>
+        Lab 9 - Blue | Green Deployment
+      </li>
+      
+      <li>
+        Lab 9 - Blue | Green Deployment
+      </li>
+      
+      <li>
+        Lab 9 - Managing Block and Object Storage
+      </li>
+      
+      <li>
+        Lab 9 - Replication and Recovery (Optional)
+      </li>
+      
+      <li>
+        Login Tour - Butterfly
+      </li>
+      
+      <li>
+        Login Tour - Wetty
+      </li>
+      
+      <li>
+        Microservices
+      </li>
+      
+      <li>
+        Observability - Feature Update
+      </li>
+      
+      <li>
+        Observability - Grafana
+      </li>
+      
+      <li>
+        Observability - Jaeger
+      </li>
+      
+      <li>
+        Observability - Kiali
+      </li>
+      
+      <li>
+        Prerequisites
+      </li>
+      
+      <li>
+        Prerequisites
+      </li>
+      
+      <li>
+        Prerequisites for JDV Development
+      </li>
+      
+      <li>
+        Security - Auth Policy
+      </li>
+      
+      <li>
+        Security - Auth Policy Prep
+      </li>
+      
+      <li>
+        Security - mTLS
+      </li>
+      
+      <li>
+        Security - Securing Ingress and Egress
+      </li>
+      
+      <li>
+        Security - Verifying mTLS
+      </li>
+      
+      <li>
+        Setup
+      </li>
+      
+      <li>
+        Setup
+      </li>
+      
+      <li>
+        Setup
+      </li>
+      
+      <li>
+        Setup
+      </li>
+      
+      <li>
+        Setup
+      </li>
+      
+      <li>
+        Setup
+      </li>
+      
+      <li>
+        Setup
+      </li>
+      
+      <li>
+        Setup
+      </li>
+      
+      <li>
+        Setup
+      </li>
+      
+      <li>
+        Setup
+      </li>
+      
+      <li>
+        The Setup
+      </li>
+      
+      <li>
+        Traffic Control - Circuit Breaking
+      </li>
+      
+      <li>
+        Traffic Control - Fault Injection
+      </li>
+      
+      <li>
+        Traffic Control - Routing Traffic
+      </li>
+      
+      <li>
+        Traffic Control - Traffic Splitting
+      </li>
+      
+      <li>
+        Verify Prerequisites
+      </li>
+      
+      <li>
+        Verify Prerequisites
+      </li>
+      
+      <li>
+        Verify Prerequisites
+      </li>
+      
+      <li>
+        Verify Prerequisites
+      </li>
+      
+      <li>
+        Verify Prerequisites
+      </li>
+      
+      <li>
+        Verify Prerequisites
+      </li>
+      
+      <li>
+        Welcome to OpenShift
+      </li>
+      
+      <li>
+        Welcome to OpenShift
+      </li>
+      
+      <li>
+        Workshop is Done
+      </li>
+      
+      <li>
+        Workshop is done!
+      </li>
+      
+      <li>
+        Wrap Up
+      </li>
+      
+      <li>
+        Wrap Up
+      </li>
+      
+      <li>
+        Wrapup
+      </li>
+      
+      <li>
+        Wrapup
+      </li>
+      
+      <li>
+        Wrapup
+      </li>
+      
+      <li>
+        Wrapup
+      </li>
+      
+      <li>
+        Wrapup
+      </li>
+      
+      <li>
+        Wrapup
+      </li>
+      
+      <li>
+        Wrapup
+      </li>
+      
+      <li>
+        Wrapup
+      </li>
+      
+    </ul>
+  </div>
+</div>
+
+    <div id="page-footer" class="container">
+      <p class="text-center">
+        Copyright &copy; 2021 Red Hat, Inc.
+      </p>
+    </div>
+    <script type="text/javascript">
+      if (("undefined" !== typeof _satellite) && ("function" === typeof _satellite.pageBottom)) {
+          _satellite.pageBottom();
+      }
+    </script>
+  </body>
+</html>
